@@ -1,0 +1,47 @@
+{
+  "name": "@web-alchemy/smooth-scroll",
+  "version": "1.0.0",
+  "author": {
+    "name": "monochromer",
+    "email": "monochromer@mail.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-alchemy/smooth-scroll.git"
+  },
+  "bugs": {
+    "url": "https://github.com/web-alchemy/smooth-scroll/issues"
+  },
+  "homepage": "https://github.com/web-alchemy/smooth-scroll",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/smooth-scroll.js",
+  "module": "dist/smooth-scroll.es.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "release": "np",
+    "prepublishOnly": "npm run build",
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "example": "npx browser-sync start --server --directory --serveStatic 'dist' --files 'dist'"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "change-case": "^3.1.0",
+    "lodash": "^4.17.15",
+    "np": "^5.0.3",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.17.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.1"
+  },
+  "dependencies": {
+    "@web-alchemy/event-emitter": "^1.0.2"
+  }
+}
