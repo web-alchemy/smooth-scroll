@@ -66,7 +66,7 @@ class SmoothScroll extends EventEmitter {
       this._state.ticking = false;
     }
 
-    this.emit('update', current);
+    this.emit('update', this._state.current);
   }
 }
 
